@@ -1,0 +1,84 @@
+git clone https://github.com/MoritzJogi/tour-radar.git
+tour-radar/
+├── index.html
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Radar</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+├── package.json
+{
+  "name": "tour-radar",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
+├── vite.config.js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+})
+└── src/
+    ├── main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+    └── App.jsx
+import React from 'react';
+
+const race = {
+  name: "Lüttich–Bastogne–Lüttich",
+  date: "21. April 2025",
+  type: "Eintagesrennen",
+  location: "Belgien",
+  profile: "Hügelig",
+  favorites: ["Tadej Pogačar", "Remco Evenepoel", "Tom Pidcock"],
+  teams: ["UAE", "INEOS", "Red Bull-BORA-hansgrohe"],
+  bike: "Specialized Tarmac SL8, Shimano Dura-Ace Di2",
+  stream: "Eurosport, GCN+"
+};
+
+function App() {
+  return (
+    <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>
+      <h1>Tour Radar</h1>
+      <h2>{race.name}</h2>
+      <p><strong>Datum:</strong> {race.date}</p>
+      <p><strong>Ort:</strong> {race.location}</p>
+      <p><strong>Typ:</strong> {race.type} ({race.profile})</p>
+      <p><strong>Favoriten:</strong> {race.favorites.join(", ")}</p>
+      <p><strong>Teams:</strong> {race.teams.join(", ")}</p>
+      <p><strong>Bike (Red Bull-BORA-hansgrohe):</strong> {race.bike}</p>
+      <p><strong>Live:</strong> {race.stream}</p>
+    </div>
+  );
+}
+
+export default App;
+

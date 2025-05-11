@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Strade Bianche",
+    "date": "2025-03-01",
+    "location": "Italien",
+    "profile": "Hügelig",
+    "podium": ["Tadej Pogačar", "Tom Pidcock", "Mathieu van der Poel"]
+  },
+  {
+    "name": "Paris–Roubaix",
+    "date": "2025-04-06",
+    "location": "Frankreich",
+    "profile": "Flach, Kopfsteinpflaster",
+    "podium": ["Mathieu van der Poel", "Wout van Aert", "Stefan Küng"]
+  },
+  {
+    "name": "Tour de Romandie",
+    "date": "2025-05-15",
+    "location": "Schweiz",
+    "profile": "Bergig",
+    "podium": []
+  },
+  {
+    "name": "Giro d’Italia",
+    "date": "2025-05-25",
+    "location": "Italien",
+    "profile": "Sehr bergig",
+    "podium": []
+  }
+]

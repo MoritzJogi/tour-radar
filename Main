@@ -81,4 +81,6 @@ function App() {
 }
 
 export default App;
+git commit -m "Initial commit of Tour Radar App"
+git push origin main
 
